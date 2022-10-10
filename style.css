@@ -1,0 +1,123 @@
+/* || VARIABLES || */
+
+:root {
+    --background-primary: #36393f;
+    /* Converted from: hsl(220,calc(var(--saturation-factor, 1)*7.7%),22.9%) */
+
+    --background-secondary: #2f3137;
+    /* Converted from: hsl(223,calc(var(--saturation-factor, 1)*6.9%),19.8%) */
+
+    --background-secondary-alt: #282a2e;
+    /* Converted from: hsl(220,calc(var(--saturation-factor, 1)*6.8%),17.3%) */
+
+    --background-tertiary: #212326;
+    /* Converted from: hsl(216,calc(var(--saturation-factor, 1)*7.2%),13.5%) */
+    
+    --shadow: 0 1px 0 rgba(5, 5, 6, 0.2), 0 1.5px 0 rgba(7, 7, 8, 0.05), 0 2px 0 rgba(5, 5, 6, 0.05);
+   /* Converted from: hsla(240,calc(var(--saturation-factor, 1)*11.1%),1.8%,0.2),
+                      hsla(240,calc(var(--saturation-factor, 1)*7.7%),2.5%,0.05), and
+                      hsla(240,calc(var(--saturation-factor, 1)*11.1%),1.8%,0.05), respectively */
+}
+
+/* || GENERAL STYLES || */
+
+body {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* || SERVERS || */
+
+#servers {
+    width: 72px;
+    height: 100vh;
+    
+    background-color: var(--background-tertiary);
+    
+    color: white;
+}
+
+/* || SIDEBAR || */
+
+#sidebar {
+    width: 240px;
+    
+    background-color: var(--background-secondary);
+    
+    color: white;
+}
+
+#server {
+    position: fixed;
+    
+    width: inherit;
+    height: 48px;
+    
+    background-color: var(--background-secondary);
+    box-shadow: var(--shadow);
+}
+
+#channels {
+    position: absolute;
+    top: 48px;
+    
+    width: inherit;
+    height: calc(100% - 100px);
+}
+
+#user {
+    position: fixed;
+    bottom: 0;
+    
+    width: inherit;
+    height: 52px;
+    
+    background-color: var(--background-secondary-alt);
+}
+
+/* || UPBAR || */
+
+#channel-info {
+    position: fixed;
+    left: 312px;
+    z-index: 1;  /* Although it doesn't make any meaningful changes,
+                  * if removed, the shadow won't work.
+                  * I don't know why, since it works with #server. */
+
+    width: 100%;
+    height: 48px;
+    
+    background-color: var(--background-primary);
+    box-shadow: var(--shadow);
+}
+
+/* || CONTENT || */
+
+#content {
+    position: relative;
+    top: 48px;
+    
+    width: calc(100vmax - 552px);
+    height: calc(100vh - 48px);
+    
+    background-color: var(--background-primary);
+    
+    color: white;
+}
+
+/* || MEMBERS || */
+
+#members {
+    position: relative;
+    top: 48px;
+    right: 0;
+    
+    width: 240px;
+    height: calc(100vh - 48px);
+    
+    background-color: var(--background-secondary);
+    
+    color: white;
+}
